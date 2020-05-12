@@ -1,3 +1,4 @@
+import 'package:api_topicos/dashboard.dart';
 import 'package:api_topicos/login.dart';
 import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
@@ -15,6 +16,10 @@ class FormSplash extends State<Splash>{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      routes: {
+        '/dash' : (context) => Dashboard(),
+        //'/api' : (context) => ListApi()
+      },
       home: SplashScreen(
         seconds: 5,
         navigateAfterSeconds: Login() ,
